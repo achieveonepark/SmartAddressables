@@ -193,6 +193,11 @@ namespace Achieve.SmartAddressables
             
             foreach (var renderer in renderers)
             {
+                if (renderer.materials == null)
+                {
+                    continue;
+                }
+                
                 foreach (var material in renderer.materials)
                 {
                     var shader = Shader.Find(material.shader.name);  // Shader 찾기
