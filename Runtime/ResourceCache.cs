@@ -38,11 +38,11 @@ namespace Achieve.SmartAddressables
             {
                 var obj = cachedObjects.Result[index];
 
-                if (Application.isEditor)
-                {
-                    // TODO : 이거 FindShader 처리해야 함
-                    SmartAddressables.FindShader((GameObject)obj);
-                }
+                // if (Application.isEditor)
+                // {
+                //     // TODO : 이거 FindShader 처리해야 함
+                //     SmartAddressables.FindShader((GameObject)obj);
+                // }
                 
                 return (T)obj;
             }
