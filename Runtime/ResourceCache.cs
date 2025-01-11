@@ -36,7 +36,7 @@ namespace Achieve.SmartAddressables
         {
             if (orderDictionary.TryGetValue(address, out var index))
             {
-                var obj = cachedObjects.Result[index];
+                var obj = cachedObjects.Result[index] as GameObject;
 
                 // if (Application.isEditor)
                 // {
@@ -44,7 +44,7 @@ namespace Achieve.SmartAddressables
                 //     SmartAddressables.FindShader((GameObject)obj);
                 // }
                 
-                return (T)obj;
+                return obj.TryGetComponent<T>(out var component) ? component : default(T);
             }
             
             return null;
