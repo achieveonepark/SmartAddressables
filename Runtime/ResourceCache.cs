@@ -50,6 +50,16 @@ namespace Achieve.SmartAddressables
             return null;
         }
 
+        public GameObject GetGameObject(string address)
+        {
+            if (orderDictionary.TryGetValue(address, out var index))
+            {
+                return cachedObjects.Result[index] as GameObject;
+            }
+
+            return null;
+        }
+
         /// <summary>
         /// Instantiates the resource allocated in memory as a runtime object.
         /// </summary>
