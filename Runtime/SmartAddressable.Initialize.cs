@@ -48,7 +48,7 @@ namespace Achieve.SmartAddressables
         {
             if (_isInitialized is false)
             {
-                Debug.LogError("PercentAsset module is not initialized. Please call await PAsset.Initialize() first.");
+                Debug.LogError("SmartAddressables module is not initialized. Please call await SmartAddressables.Initialize() first.");
             }
         }
     }
